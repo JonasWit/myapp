@@ -10,7 +10,7 @@
         <vm:HomePageViewModel />
     </Design.DataContext>
 
-    <StackPanel>
+    <StackPanel Background="{DynamicResource PrimaryBackground}">
         <Label Content="{Binding PageTitle}" />
     </StackPanel>
 </UserControl>
