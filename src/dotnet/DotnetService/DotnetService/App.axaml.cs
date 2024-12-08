@@ -3,7 +3,8 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
-using DotnetService.ViewModels;
+using DotnetService.DomainData;
+using DotnetService.Factories;
 using DotnetService.Views;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -26,13 +27,15 @@ public class App : Application
                 DisableAvaloniaDataAnnotationValidation();
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = services.GetRequiredService<MainViewModel>()
+                    DataContext = services.GetRequiredService<ViewModelFactory>()
+                        .GetViewModel(AvaloniaInfrastructureConstants.PagesViewModels.MainViewModel)
                 };
                 break;
             case ISingleViewApplicationLifetime singleViewPlatform:
                 singleViewPlatform.MainView = new MainView
                 {
-                    DataContext = services.GetRequiredService<MainViewModel>()
+                    DataContext = services.GetRequiredService<ViewModelFactory>()
+                        .GetViewModel(AvaloniaInfrastructureConstants.PagesViewModels.MainViewModel)
                 };
                 break;
         }

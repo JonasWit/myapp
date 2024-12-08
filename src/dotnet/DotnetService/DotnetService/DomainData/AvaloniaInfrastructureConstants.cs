@@ -1,9 +1,10 @@
 namespace DotnetService.DomainData;
 
-public class AvaloniaConstants
+public static class AvaloniaInfrastructureConstants
 {
     public struct PagesViewModels
     {
+        public const string MainViewModel = nameof(MainViewModel);
         public const string HomePageViewModel = nameof(HomePageViewModel);
         public const string SettingsPageViewModel = nameof(SettingsPageViewModel);
     }

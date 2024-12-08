@@ -21,12 +21,12 @@ public partial class MainViewModel : ViewModelBase
     [RelayCommand]
     private void SwitchToHome()
     {
-        CurrentPage = _viewModelFactory.GetViewModel(AvaloniaConstants.PagesViewModels.HomePageViewModel);
+        CurrentPage = _viewModelFactory.GetViewModel(AvaloniaInfrastructureConstants.PagesViewModels.HomePageViewModel);
     }
 
     [RelayCommand]
     private void SwitchToSettings()
     {
-        CurrentPage = _viewModelFactory.GetViewModel(AvaloniaConstants.PagesViewModels.SettingsPageViewModel);
+        CurrentPage = _viewModelFactory.GetViewModel(AvaloniaInfrastructureConstants.PagesViewModels.SettingsPageViewModel);
     }
 }

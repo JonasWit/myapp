@@ -12,6 +12,7 @@ public static class ViewModelLocator
             {
                 return name switch
                 {
+                    nameof(MainViewModel) => sp.GetRequiredService<MainViewModel>(),
                     nameof(HomePageViewModel) => sp.GetRequiredService<HomePageViewModel>(),
                     nameof(SettingsPageViewModel) => sp.GetRequiredService<SettingsPageViewModel>(),
                     _ => throw new Exception($"ViewModel {name} is not registered")
