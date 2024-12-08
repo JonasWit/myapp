@@ -2,6 +2,6 @@
 
 namespace DotnetService.ViewModels;
 
-public abstract class ViewModelBase : ObservableObject
+public abstract class ViewModelBase : ObservableRecipient
 {
 }
