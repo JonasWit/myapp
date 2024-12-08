@@ -12,5 +12,8 @@
 
     <StackPanel Background="{DynamicResource PrimaryBackground}">
         <Label Content="{Binding PageTitle}" />
+        <ComboBox ItemsSource="{Binding ComboboxItems}" SelectedItem="{Binding ComboboxSelectedItem}"
+                  MaxDropDownHeight="100" />
+        <Button Command="{Binding ComboboxSelectionChangedCommand}">Test</Button>
     </StackPanel>
 </UserControl>
