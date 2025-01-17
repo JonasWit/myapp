@@ -13,13 +13,6 @@
     </Design.DataContext>
 
     <Grid RowDefinitions="*, Auto">
-
         <ContentControl Grid.Row="0" Content="{Binding CurrentPage}" />
-
-
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Command="{Binding SwitchToHomeCommand}">Home</Button>
-            <Button Command="{Binding SwitchToSettingsCommand}">Settings</Button>
-        </StackPanel>
     </Grid>
 </UserControl>
