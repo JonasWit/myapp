@@ -6,14 +6,6 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="DotnetService.Components.NavBar" Height="65">
 
-    <Design.PreviewWith>
-        <Border Background="{StaticResource PrimaryBackground}" CornerRadius="12">
-            <Grid RowDefinitions="Auto,*">
-                <components:NavBar />
-            </Grid>
-        </Border>
-    </Design.PreviewWith>
-
     <UserControl.Styles>
         <Style Selector="Ellipse.pointer">
             <Setter Property="Margin" Value="0,0,0,0" />
